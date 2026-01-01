@@ -17,9 +17,8 @@ const FeaturedProducts = () => {
   const products = [
     { id: 1, name: "Green Apple", price: "14.99", oldPrice: "20.99", sale: "Sale 50%", rating: 4, image: "/images/product-1.png" },
     { id: 2, name: "Chanise Cabbage", price: "14.99", rating: 4, image: "/images/product-2.png" },
-    { id: 3, name: "Green Capsicum", price: "14.99", rating: 4, image: "/images/product-3.png" }, 
-    { id: 4, name: "Okra", price: "14.99", rating: 4, image: "/images/product-4.png" }, 
-  
+    { id: 3, name: "Green Capsicum", price: "14.99", rating: 4, image: "/images/product -3.png" }, 
+    { id: 4, name: "Okra", price: "14.99", rating: 4, image: "/images/product -4.png" }, 
     { id: 5, name: "Surjapur Mango", price: "34.00", rating: 5, image: "/images/product-5.png" },
     { id: 6, name: "Big Potatoes", price: "12.00", rating: 4, image: "/images/product-6.png" },
     { id: 7, name: "Fresh Cauliflower", price: "12.00", rating: 4, image: "/images/product-7.png" },

@@ -16,7 +16,7 @@ const About = () => {
       <div className="mb-6 md:mb-[40px] w-full flex justify-center">
         <img
           className="w-full h-auto object-cover"
-          src="/images/bannar.jpg" // public/ সরানো হয়েছে
+          src="/images/bannar.jpg" 
           alt="Banner"
         />
       </div>
@@ -40,7 +40,7 @@ const About = () => {
 
           <div className="w-full lg:w-[500px] px-4 lg:px-0">
             <img
-              src="/images/about img.jpg" // public/ সরানো হয়েছে
+              src="/images/about img.jpg"
               alt="Organic Food"
               className="w-full rounded-lg"
             />
@@ -54,7 +54,7 @@ const About = () => {
           {/* LEFT IMAGE */}
           <div className="w-full relative">
             <img
-              src="/images/about img 2.jpg" // public/ সরানো হয়েছে
+              src="/images/about img 2.jpg" 
               alt="Farmer with vegetables"
               className="w-full h-auto lg:rounded-r-[20px] object-cover"
             />
@@ -65,7 +65,7 @@ const About = () => {
             <h2 className="font-poppins font-[700] text-[28px] md:text-[36px] text-[#1A1A1A] leading-[105%] mb-4">
               100% Trusted <br /> Organic Food Store
             </h2>
-            {/* বাকি কোড আগের মতোই থাকবে... */}
+            {/*.. */}
             <p className="text-[14px] md:text-base text-[#999999] font-[400] leading-[135%] mb-6">
               Pellentesque a ante vulputate leo porttitor luctus sed eget eros.
             </p>
@@ -93,7 +93,7 @@ const About = () => {
             {/* Right Image */}
             <div className="lg:col-span-7 flex justify-end items-end w-full">
               <img
-                src="/images/about img 3.jpg" // public/ সরানো হয়েছে
+                src="/images/about img 3.jpg"
                 alt="Delivery Boy"
                 className="w-full h-auto object-contain lg:scale-100 origin-bottom-right"
               />
@@ -115,7 +115,7 @@ const About = () => {
             {/* Team Card 1 */}
             <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
               <img
-                src="/images/Team Card.jpg" // public/ সরানো হয়েছে
+                src="/images/Team Card.jpg" 
                 alt="Jenny Wilson"
                 className="w-full h-64 object-cover"
               />
@@ -128,7 +128,7 @@ const About = () => {
             {/* Team Card 2 */}
             <div className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
               <img
-                src="/images/Team Card 2.jpg" // public/ সরানো হয়েছে
+                src="/images/Team Card 2.jpg" 
                 alt="Jane Cooper"
                 className="w-full h-64 object-cover"
               />
