@@ -5,9 +5,10 @@ import { FiPhoneCall, FiSearch, FiHeart } from "react-icons/fi";
 import { SlHandbag } from "react-icons/sl";
 import { FaRegUser } from "react-icons/fa";
 import { IoMenu, IoCloseSharp } from "react-icons/io5";
-import SearchBar from "./SearchBar"; 
-import Login from "../../authentication/Login"; 
-import Register from "../../authentication/Register"; 
+import SearchBar from "./SearchBar.jsx"; 
+// নিচের দুটি লাইনে 'Authentication' এর A বড় হাতের এবং ফাইলের নাম হুবহু আপনার ফোল্ডার অনুযায়ী দেওয়া হয়েছে
+import Login from "../../Authentication/login.jsx"; 
+import Register from "../../Authentication/Register.jsx"; 
 
 const Navigation = () => {
 
@@ -36,13 +37,13 @@ const Navigation = () => {
       <Header/>
       <div className="container mx-auto px-4 sm:px-8 lg:px-15 py-3 sm:py-[15px]">
         <div className='grid grid-cols-5 items-center'>
-         
+          
           <div className='col-span-2 hidden lg:flex items-center'>
             <Dropdown/>
           </div>
           
           <div className='col-span-3 lg:col-span-1 flex justify-center lg:justify-start'>
-            <a href="Home" onClick={closeAll}>
+            <a href="/" onClick={(e) => { e.preventDefault(); closeAll(); }}>
               <img 
                 src="images/ecobazar.png" 
                 className='w-[180px] sm:w-[130px] md:w-[140px] lg:w-[150px]' 
@@ -132,7 +133,6 @@ const Navigation = () => {
           flex flex-col
         `}>
           <div className='p-6 sm:p-8 flex flex-col gap-8'>
-            {/* Close Button */}
             <div className='flex justify-end'>
               <button 
                 onClick={toggleHandler}
@@ -142,9 +142,8 @@ const Navigation = () => {
               </button>
             </div>
             
-        
             <div className='flex justify-center'>
-              <a href="Home" onClick={closeAll}>
+              <a href="/" onClick={(e) => { e.preventDefault(); closeAll(); }}>
                 <img 
                   src="images/ecobazar.png" 
                   className='w-[200px] sm:w-[220px]' 
@@ -153,7 +152,6 @@ const Navigation = () => {
               </a>
             </div>
             
-            {/* Dropdown/Menu Items */}
             <div className='flex flex-col gap-4 text-[var(--color-gray-scale-gray---900)] text-xl sm:text-2xl'>
               <Dropdown />
             </div>
