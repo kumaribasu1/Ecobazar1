@@ -14,21 +14,20 @@ const CustomBagIcon = () => (
 const FeaturedProducts = () => {
   const [activeId, setActiveId] = useState(null);
 
- 
   const products = [
-    { id: 1, name: "Green Apple", price: "14.99", oldPrice: "20.99", sale: "Sale 50%", rating: 4, image: "public/images/product-1.png" },
-    { id: 2, name: "Chanise Cabbage", price: "14.99", rating: 4, image: "public/images/product-2.png" },
-    { id: 3, name: "Green Capsicum", price: "14.99", rating: 4, image: "public/images/product -3.png" },
-    { id: 4, name: "Okra", price: "14.99", rating: 4, image: "public/images/product -4.png" },
+    { id: 1, name: "Green Apple", price: "14.99", oldPrice: "20.99", sale: "Sale 50%", rating: 4, image: "/images/product-1.png" },
+    { id: 2, name: "Chanise Cabbage", price: "14.99", rating: 4, image: "/images/product-2.png" },
+    { id: 3, name: "Green Capsicum", price: "14.99", rating: 4, image: "/images/product-3.png" }, 
+    { id: 4, name: "Okra", price: "14.99", rating: 4, image: "/images/product-4.png" }, 
   
-    { id: 5, name: "Surjapur Mango", price: "34.00", rating: 5, image: "public/images/product-5.png" },
-    { id: 6, name: "Big Potatoes", price: "12.00", rating: 4, image: "public/images/product-6.png" },
-    { id: 7, name: "Fresh Cauliflower", price: "12.00", rating: 4, image: "public/images/product-7.png" },
-    { id: 8, name: "Fresh Indian Malta", price: "20.00", rating: 5, image: "public/images/product-8.png" },
-    { id: 9, name: "Eggplant", price: "34.00", rating: 4, image: "public/images/product-9.png" },
-    { id: 10, name: "Corn", price: "12.00", rating: 4, image: "public/images/product-10.png" },
-    { id: 11, name: "Red Tomatos", price: "9.00", rating: 4, image: "public/images/product-11.png" },
-    { id: 12, name: "Green Lettuce", price: "09.00", rating: 4, image: "public/images/product-12.png" },
+    { id: 5, name: "Surjapur Mango", price: "34.00", rating: 5, image: "/images/product-5.png" },
+    { id: 6, name: "Big Potatoes", price: "12.00", rating: 4, image: "/images/product-6.png" },
+    { id: 7, name: "Fresh Cauliflower", price: "12.00", rating: 4, image: "/images/product-7.png" },
+    { id: 8, name: "Fresh Indian Malta", price: "20.00", rating: 5, image: "/images/product-8.png" },
+    { id: 9, name: "Eggplant", price: "34.00", rating: 4, image: "/images/product-9.png" },
+    { id: 10, name: "Corn", price: "12.00", rating: 4, image: "/images/product-10.png" },
+    { id: 11, name: "Red Tomatos", price: "9.00", rating: 4, image: "/images/product-11.png" },
+    { id: 12, name: "Green Lettuce", price: "09.00", rating: 4, image: "/images/product-12.png" },
   ];
 
   return (
@@ -55,11 +54,20 @@ const FeaturedProducts = () => {
                 <div className="absolute top-4 left-4 z-10 bg-[#EA4B48] text-white text-xs px-2 py-1 rounded">{product.sale}</div>
               )}
               <div className={`absolute top-4 right-4 flex flex-col gap-2 z-10 transition-opacity duration-300 ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
-                <button className="p-2 bg-white rounded-full border border-gray-100 hover:bg-[#2C742F] hover:text-white transition-colors"><Heart size={20} /></button>
-                <button className="p-2 bg-white rounded-full border border-gray-100 hover:bg-[#2C742F] hover:text-white transition-colors"><Eye size={20} /></button>
+                <button className="p-2 bg-white rounded-full border border-gray-100 hover:bg-[#2C742F] hover:text-white transition-colors">
+                  <Heart size={20} />
+                </button>
+                <button className="p-2 bg-white rounded-full border border-gray-100 hover:bg-[#2C742F] hover:text-white transition-colors">
+                  <Eye size={20} />
+                </button>
               </div>
               <div className="p-4 h-64 flex items-center justify-center">
-                <img src={product.image} alt={product.name} className="max-h-full max-w-full object-contain" />
+                <img 
+                  src={product.image} 
+                  alt={product.name} 
+                  className="max-h-full max-w-full object-contain" 
+                  onError={(e) => { e.target.src = 'https://via.placeholder.com/150'; }} // ছবি না পেলে ব্যাকআপ ইমেজ দেখাবে
+                />
               </div>
               <div className="p-4 flex justify-between items-center">
                 <div>

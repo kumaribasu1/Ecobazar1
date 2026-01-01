@@ -6,7 +6,6 @@ import { SlHandbag } from "react-icons/sl";
 import { FaRegUser } from "react-icons/fa";
 import { IoMenu, IoCloseSharp } from "react-icons/io5";
 import SearchBar from "./SearchBar.jsx"; 
-// নিচের দুটি লাইনে 'Authentication' এর A বড় হাতের এবং ফাইলের নাম হুবহু আপনার ফোল্ডার অনুযায়ী দেওয়া হয়েছে
 import Login from "../../Authentication/login.jsx"; 
 import Register from "../../Authentication/Register.jsx"; 
 
